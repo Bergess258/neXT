@@ -26,7 +26,7 @@ namespace _15
             Console.WriteLine();
         }
 
-        private static void GettingDate(List<List<PlacesV>> Places)
+        private static void GettingData(List<List<PlacesV>> Places)
         {
             var CitiesT = from list in Places from place in list where place.ToString().Length >= 9 orderby place select place;
             var CitiesL = Places.SelectMany(List => List.ToArray().Where(place => place is City).Select(place => place));
