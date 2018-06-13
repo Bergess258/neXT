@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{012B3655-474C-43C8-8661-52E0E55BD46B}</ProjectGuid>
+    <ProjectGuid>{D1CD85C6-0934-4217-BD02-0D27E93FCE00}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_14</RootNamespace>
     <AssemblyName>14</AssemblyName>
@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MainLibrary">
+      <HintPath>..\..\..\Практика2\MainLibrary\MainLibrary\bin\Debug\MainLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -42,6 +45,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CollectionHandlerEventArgs.cs" />
+    <Compile Include="Journal.cs" />
+    <Compile Include="JournalEntry.cs" />
+    <Compile Include="MyNewCollection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
