@@ -24,15 +24,15 @@ namespace _14
             bool ok=base.Remove(key);
             CollectionHandlerEventArgs args;
             if (ok==true)
-             args= new CollectionHandlerEventArgs(name, " Removing",key);
-            else args = new CollectionHandlerEventArgs(name, " Removing was failed", key);
+             args= new CollectionHandlerEventArgs(name, " Удаление",key);
+            else args = new CollectionHandlerEventArgs(name, " Удаление не выполнено", key);
             CollectionCountChanged(Name, args);
             return ok;
         }
         public new void Add(TKey key, TValue value)
         {
             Point t = new Point(key, value);
-            CollectionHandlerEventArgs args = new CollectionHandlerEventArgs(Name, "Object is added", t);
+            CollectionHandlerEventArgs args = new CollectionHandlerEventArgs(Name, "Добавление", t);
             if (CollectionCountChanged != null)
                 CollectionCountChanged(Name, args);
             base.Add(key, value);
@@ -48,12 +48,12 @@ namespace _14
                 if (key > -1 && key < Count)
                 {
                     Entries[key] = value;
-                    CollectionHandlerEventArgs args = new CollectionHandlerEventArgs(Name, "Object changed its value", value);
+                    CollectionHandlerEventArgs args = new CollectionHandlerEventArgs(Name, "Изменение переменной", value);
                     if (CollectionReferenceChanged != null)
                         CollectionReferenceChanged(Name, args);
                 }
                 else
-                    throw new Exception("Index out of range");
+                    throw new Exception("Индекс вне границ массива");
             }
         }
         public bool Remove(int j)
@@ -64,7 +64,7 @@ namespace _14
             else
             {
                 TValue buf=Entries[j].Value;
-                CollectionHandlerEventArgs args = new CollectionHandlerEventArgs(Name, "Object is removed", buf);
+                CollectionHandlerEventArgs args = new CollectionHandlerEventArgs(Name, "Удаление", buf);
                 if (CollectionCountChanged != null)
                     CollectionCountChanged(Name, args);
                 for (int i = 0; i < j; i++)

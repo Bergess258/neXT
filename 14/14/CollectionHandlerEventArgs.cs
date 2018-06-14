@@ -23,7 +23,7 @@ namespace _14
 
         public override string ToString()
         {
-            return "Name: " + Name + "\nType of change: " + ChangeName + "\n Object: " + Obj.ToString();
+            return "Название коллекции: " + Name + "\nСобытие: " + ChangeName + "\n Объект: " + Obj.ToString();
         }
     }
 }
