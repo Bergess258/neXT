@@ -53,7 +53,7 @@ namespace _14
                         CollectionReferenceChanged(Name, args);
                 }
                 else
-                    throw new Exception("Индекс вне границ");
+                    throw new Exception("Index out of range");
             }
         }
         public bool Remove(int j)

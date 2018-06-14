@@ -33,7 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MainLibrary">
-      <HintPath>..\..\..\Практика2\MainLibrary\MainLibrary\bin\Debug\MainLibrary.dll</HintPath>
+      <HintPath>..\..\..\task2\MainLibrary\MainLibrary\bin\Debug\MainLibrary.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
